@@ -18,7 +18,7 @@ One of the easiest solutions is to avoid constructing background from a single i
 ### Enough talking, show me the code!
 
 Alright let's see how easy it really is to get the background image with this trick. As I mentioned this method will require a few background frames to overcome the noise. So, we define a mode for capturing these background frames. We switch the modes with 'b' button.
-```python
+```python3
 import cv2  
 import numpy as np  
   
@@ -54,7 +54,7 @@ while True:
 	        mode = "background"
 	        
 	elif key == ord('q'): # Just for ending the cycle  
-        break
+       	    break
 ``` 
 Ok now we have the code to compute the background. Let's go through storing and showing the background frames.
 ```Python
