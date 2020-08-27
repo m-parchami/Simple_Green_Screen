@@ -86,4 +86,4 @@ First we compute absolute difference between two images( captured frame and prev
 		cv2.waitKey(1)
 ```
 
-Images will be added soon.
+![Testing]("test.png")
