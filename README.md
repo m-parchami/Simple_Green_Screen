@@ -25,6 +25,8 @@ import numpy as np
 cap = cv2.VideoCapture(0) # If you have an additional webcam you may change this line
 buffer = []  
 mode = "capture"  
+background = None
+threshold = 70
 while True:  
     ok, frame = cap.read()
     if not ok:
@@ -68,6 +70,8 @@ First we compute absolute difference between two images( captured frame and prev
 ```Python
 
 		sub_image = cv2.absdiff(frame, background)
+        sub_image = np.sum(sub_image, axis=2)
+
 		binary = np.zeros(sub_image.shape, dtype=np.uint8)  
 		binary[sub_image > threshold] = 1
 				
