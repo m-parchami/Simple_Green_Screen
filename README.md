@@ -70,7 +70,7 @@ First we compute absolute difference between two images( captured frame and prev
 ```Python
 
 		sub_image = cv2.absdiff(frame, background)
-        sub_image = np.sum(sub_image, axis=2)
+                sub_image = np.sum(sub_image, axis=2)
 
 		binary = np.zeros(sub_image.shape, dtype=np.uint8)  
 		binary[sub_image > threshold] = 1
