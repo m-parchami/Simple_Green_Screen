@@ -86,4 +86,4 @@ First we compute absolute difference between two images( captured frame and prev
 		cv2.waitKey(1)
 ```
 
-![Testing]("test.png")
+![Testing](https://github.com/m-parchami/Simple_Green_Screen/blob/master/test.png)
