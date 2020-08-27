@@ -87,3 +87,10 @@ First we compute absolute difference between two images( captured frame and prev
 ```
 
 ![Testing](https://github.com/m-parchami/Simple_Green_Screen/blob/master/test.png)
+
+As you can see the input camera image is too noisy. Want to see how our median approach fixed this noise? Here's the background image:
+![Background](https://github.com/m-parchami/Simple_Green_Screen/blob/master/background.png)
+There are a couple of things to notice here.
+First, Notice the black squares on my left hand. It can be inferred that these locations where not seperated well from the background. (why?) Because they had same color with the exact same location in the background image. In contrast, my shirt is ok. I will provide ways to improve this issue in my later commits. Just a clue, we can use connected components, find the biggest(excluding the background), assuming it's the main object, then after finding the contours we can simply make all the pixels in that area visible.
+
+The other problem is near the boundaries. They don't look as smooth as they should. This is because the structuring element. while doing either dilation and erosion, we are using box filters. to improve this, we must refine these edges specifically. either use other structring elements or do some other smoothing (like fitting to contour to edges computed by other algorithms ...). I'm kinda busy nowadays to complete this section. I promise to this in the very near future.
