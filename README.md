@@ -44,14 +44,14 @@ while True:
 			# Background is done, go to the capture (normal) mode
 	        mode = "capture"  
 	  
-	  else:  
+	    else:  
 	        # Free the buffer for new background computation
 			buffer = []  
 			
 			# Switch the mode
 	        mode = "background"
 	        
-	  elif key == ord('q'): # Just for ending the cycle  
+	elif key == ord('q'): # Just for ending the cycle  
         break
 ``` 
 Ok now we have the code to compute the background. Let's go through storing and showing the background frames.
